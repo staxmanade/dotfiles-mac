@@ -118,7 +118,7 @@ Bundle 'edkolev/tmuxline.vim'
 
 " code autocompletion
 " NOTE: Requires extra compilation setup
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 
 " Syntax checking hacks for vim
 Bundle 'scrooloose/syntastic'
