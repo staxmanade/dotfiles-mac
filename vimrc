@@ -90,7 +90,11 @@ Bundle 'tpope/vim-fugitive'
 
 "lean & mean status/tabline for vim that's light as air"
 Bundle 'bling/vim-airline'
-let g:airline_powerline_fonts = 1
+
+" https://github.com/Lokaltog/powerline-fonts
+" Install these modified fonts before switching this to 1
+let g:airline_powerline_fonts = 0
+
 let g:airline_theme='powerlineish'
 set laststatus=2
 
