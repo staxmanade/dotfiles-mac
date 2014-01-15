@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Dotfile Linksetup
 
 # Create a unix timestamp
