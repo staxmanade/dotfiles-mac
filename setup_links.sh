@@ -15,9 +15,9 @@ files=(vimrc emacs bash_profile bashrc gitconfig gitignore_global tmux.conf git-
 # For each link in files backup the existing one if there is one and then link to the new one
 for linkName in ${files[@]}
 do
-       mv $HOME/.$linkName $HOME/$backupDirectory 2> errors.txt
+       mv $HOME/.$linkName $HOME/$backupDirectory 2> /dev/null
        ln -s $HOME/dotfiles/$linkName $HOME/.$linkName
 done
 
-mv $HOME/.vim $HOME/$backupDirectory 2> errors.txt
+mv $HOME/.vim $HOME/$backupDirectory 2> /dev/null
 ln -s $HOME/dotfiles/directories/vim $HOME/.vim
