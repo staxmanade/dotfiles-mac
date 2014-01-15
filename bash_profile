@@ -39,3 +39,6 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 export GREP_OPTIONS='--color=auto'
 
 # User specific aliases and functions
+
+# Ignore case for input
+bind 'set completion-ignore-case on'
