@@ -1,8 +1,5 @@
-dotfiles
+Setup
 ========
-
-# Setup
-
 ```
 git clone https://github.com/icecreammatt/dotfiles.git dotfiles
 cd dotfiles
