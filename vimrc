@@ -20,6 +20,12 @@ set number
 nnoremap <CR> :noh<CR><CR>
 "nnoremap <esc> :noh<return><esc>
 
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+nnoremap <S-TAB> :bprev<CR>
+nnoremap <TAB> :bnext<CR>
+nnoremap <esc> :noh<return><esc>
+
 noremap H ^
 noremap L $
 noremap 0 <NOP>
@@ -143,3 +149,4 @@ Bundle 'scrooloose/nerdtree'
 
 "Vim local themes for powerline
 Bundle 'zhaocai/linepower.vim'
+       
