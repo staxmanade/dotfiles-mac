@@ -71,5 +71,9 @@ alias gmt='git mergetool'
 alias ggg='gf;grom;gsub;'
 alias g4='grh;gf;grom;gsub;'
 
+alias gitk='gitk --all &'
+alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+
+
 # OSX
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;'

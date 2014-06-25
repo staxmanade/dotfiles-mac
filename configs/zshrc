@@ -33,8 +33,9 @@ export PATH=$HOME/bin:$generalPath:$windowsPath
 [ -e "${HOME}/.zsh_aliases" ] && source "${HOME}/.zsh_aliases"
 [ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
 
-PROMPT='%{$fg_bold[green]%}>%{$fg[white]%} '
-# RPROMPT=$'$(git_super_status)'
+PROMPT='${PWD/#$HOME/~}%{$fg_bold[green]%}>%{$fg[white]%} '
+#RPROMPT=''
+#RPROMPT=$'$(git_super_status)'
 # PROMPT=$'%{$fg_bold[white]%}%M %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}%{$fg_bold[blue]%} % %{$reset_color%}'
 
 # Dotfiles update
@@ -43,3 +44,5 @@ source ~/dotfiles/tools/check_for_upgrade.sh
 # whiteboard () {
 #     convert $1 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 $2
 # }
+#
+. /opt/boxen/env.sh
