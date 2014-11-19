@@ -113,7 +113,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 
 " capslock.vim: Software caps lock
-Bundle 'tpope/vim-capslock'
+"Bundle 'tpope/vim-capslock'
 
 " repeat.vim: enable repeating supported plugin maps with .
 Bundle 'tpope/vim-repeat'
@@ -151,7 +151,7 @@ Bundle 'edkolev/tmuxline.vim'
 
 " code autocompletion
 " NOTE: Requires extra compilation setup
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 
 " Syntax Highlighting for Stylus
 Bundle 'wavded/vim-stylus'

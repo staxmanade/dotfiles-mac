@@ -28,7 +28,7 @@ source $ZSH/oh-my-zsh.sh
 generalPath="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 windowsPath="/c/Windows/System32:/c/Program Files/Perforce"
 
-export PATH=$HOME/bin:$generalPath:$windowsPath
+export PATH=$HOME/bin:$generalPath:$windowsPath:/opt/boxen/nodenv/versions/v0.10/bin
 
 [ -e "${HOME}/.zsh_aliases" ] && source "${HOME}/.zsh_aliases"
 [ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
@@ -46,3 +46,5 @@ source ~/dotfiles/tools/check_for_upgrade.sh
 # }
 #
 . /opt/boxen/env.sh
+
+eval "$(gulp --completion=zsh)"
