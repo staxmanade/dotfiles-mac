@@ -48,3 +48,6 @@ source ~/dotfiles/tools/check_for_upgrade.sh
 . /opt/boxen/env.sh
 
 eval "$(gulp --completion=zsh)"
+
+# thanks to http://murphymac.com/tree-command-for-mac/
+alias tree='find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"'
