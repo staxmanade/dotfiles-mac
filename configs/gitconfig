@@ -13,4 +13,4 @@
 [merge]
 	tool = merge_wrapper
 [mergetool "merge_wrapper"]
-	cmd = $HOME/dotfiles/tools/merge-wrapper.sh \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	cmd = $HOME/dotfiles/tools/merge-wrapper.js \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"

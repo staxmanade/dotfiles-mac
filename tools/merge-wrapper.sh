@@ -10,6 +10,10 @@
 #    cmd = $HOME/merge-wrapper.sh \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 #
 # Save this script in your $HOME
+#
+# # How to create p4merge command?
+# http://answers.perforce.com/articles/KB_Article/Command-line-P4Merge-on-Mac-OS-X
+#
 
 BASE=$1
 LOCAL=$2
