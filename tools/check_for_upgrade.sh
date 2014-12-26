@@ -37,11 +37,13 @@ then
       _upgrade_dotfiles
     else
 
+      pushd $dotfiles 
       git fetch --all
       originMaster=$(git rev-parse origin/master);
       localHead=$(git rev-parse head);
+      popd
 
-      if [ $originMaster -ne $localHead ]; then
+      if [ "$originMaster" != "$localHead" ]; then
         echo "[Dotfiles] Would you like to check for updates?"
         echo "Type Y to update dotfiles: \c"
         read line
