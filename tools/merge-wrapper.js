@@ -4,7 +4,7 @@
 #!/bin/bash
 #
 # Wrapper script for git mergetool
-# This requires the .gitconfig file to have
+# This requires ~/.gitconfig file to have
 # the following (adjusting for paths):
 #
 #  [merge]
@@ -14,7 +14,7 @@
 #
 # Save this script in your $HOME
 #
-# # How to create p4merge command?
+# How to create p4merge command?
 # http://answers.perforce.com/articles/KB_Article/Command-line-P4Merge-on-Mac-OS-X
 */
 
