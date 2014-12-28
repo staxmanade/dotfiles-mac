@@ -23,28 +23,47 @@
 // REMOTE=$3
 // MERGED=$4
 
+var path = require('path');
+var spawn = require('child_process').spawn;
+var diffArgs = process.argv.slice(2);
+
+diffArgs = {
+  BASE: diffArgs[0],
+  LOCAL: diffArgs[1],
+  REMOTE: diffArgs[2],
+  MERGED: diffArgs[3],
+  REST: diffArgs.slice(4),
+  ALL: diffArgs.slice(0),
+};
+
+var diffOptions;
+
 function createP4MergeCommand(args) {
 
   var result = {
     cmd: "p4merge",
-    args: args
+    args: args.ALL
   };
 
 
   // p4merge doesn't like to be called with the extra REMOTE=3/MERGED=4
   // args so we lop them off before loading it up for images.
   if(isImage(args[0])) {
-    result.args = args.slice(0, 2);
+    result.args = [args.BASE, args.LOCAL];
   }
 
   return result;
 }
 
+function createOpenDiffCommand(args) {
 
-var path = require('path');
-var spawn = require('child_process').spawn;
+  var result = {
+    cmd: "opendiff",
+    args: [args.BASE, args.LOCAL]
+  };
 
-var diffArgs = process.argv.slice(2);
+  return result;
+}
 
 var isImage = function (path) {
 
@@ -59,18 +78,45 @@ var isImage = function (path) {
   });
 };
 
-var diffOptions = createP4MergeCommand(diffArgs);
+function launch(diffOptions) {
+  var cmd = spawn(diffOptions.cmd, diffOptions.args);
 
-var cmd = spawn(diffOptions.cmd, diffOptions.args);
+  cmd.stdout.on('data', function (data) {
+    console.log(data);
+  });
 
-cmd.stdout.on('data', function (data) {
-  console.log(data);
-});
+  cmd.stderr.on('data', function (data) {
+    console.error(data.toString());
+  });
 
-cmd.stderr.on('data', function (data) {
-  console.error(data);
-});
+  cmd.on('close', function (code) {
+    process.exit(code);
+  });
+}
 
-cmd.on('close', function (code) {
-  process.exit(code);
-});
+var diffLookup = {
+  ".bmp": createP4MergeCommand,
+  ".gif": createP4MergeCommand,
+  ".jpg": createP4MergeCommand,
+  ".jpeg": createP4MergeCommand,
+  ".png": createP4MergeCommand,
+  ".pbm": createP4MergeCommand,
+  ".pgm": createP4MergeCommand,
+  ".ppm": createP4MergeCommand,
+  ".tiff": createP4MergeCommand,
+  ".xbm": createP4MergeCommand,
+  ".xpm": createP4MergeCommand,
+
+// EX: using different diff command
+//  ".js": createOpenDiffCommand,
+
+  "DEFAULT": createP4MergeCommand
+};
+
+var fileExt = (path.extname(diffArgs.BASE) || '').toLowerCase();
+
+diffOptions = (diffLookup[fileExt] || diffLookup.DEFAULT)(diffArgs);
+
+//console.log(diffOptions);
+
+launch(diffOptions);
