@@ -48,7 +48,7 @@ function createP4MergeCommand(args) {
 
   // p4merge doesn't like to be called with the extra REMOTE=3/MERGED=4
   // args so we lop them off before loading it up for images.
-  if(isImage(args[0])) {
+  if(isImage(args.BASE)) {
     result.args = [args.BASE, args.LOCAL];
   }
 
