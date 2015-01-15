@@ -52,11 +52,13 @@ then
         else
           _update_dotfiles_update
         fi
+      else
+        _update_dotfiles_update
       fi
+
     fi
   fi
 else
   # create the dotfiles file
   _update_dotfiles_update
 fi
-
