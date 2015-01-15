@@ -49,8 +49,10 @@ source ~/dotfiles/tools/check_for_upgrade.sh
 
 eval "$(gulp --completion=zsh)"
 eval "$(skypeit --completion=zsh)"
+eval "$(tog completion zsh)"
 
 # thanks to http://murphymac.com/tree-command-for-mac/
 alias tree='find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"'
 alias gdiff='git difftool -y --extcmd icdiff | less'
+alias mou='open /Applications/Mou.app'
 . ~/commandAllThingsProfile.sh
