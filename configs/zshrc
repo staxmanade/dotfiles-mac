@@ -56,3 +56,4 @@ alias tree='find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"'
 alias gdiff='git difftool -y --extcmd icdiff | less'
 alias mou='open /Applications/Mou.app'
 . ~/commandAllThingsProfile.sh
+alias pash='mono ~/code/personal/Pash/Source/PashConsole/bin/Debug/Pash.exe'
