@@ -1,6 +1,6 @@
 # General
 alias cl='clear; ls -lA1h'
-alias cls='clear'
+alias cls='clear;'
 alias ll='ls -lah'
 alias l='ls -lh'
 alias rzsh='source ~/.zshrc'
