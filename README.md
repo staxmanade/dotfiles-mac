@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-__Install with [boxen](https://github.com/staxmanade/boxen-vertigo)__
+Git clone and Run `setup.sh`
