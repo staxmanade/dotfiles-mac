@@ -28,7 +28,7 @@ source $ZSH/oh-my-zsh.sh
 generalPath="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 windowsPath="/c/Windows/System32:/c/Program Files/Perforce"
 
-export PATH=$HOME/bin:$generalPath:$windowsPath:/opt/boxen/nodenv/versions/v0.10/bin
+export PATH=$HOME/bin:$generalPath:$windowsPath
 
 [ -e "${HOME}/.zsh_aliases" ] && source "${HOME}/.zsh_aliases"
 [ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
@@ -72,4 +72,4 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-eval "$(boot2docker shellinit)"
+#eval "$(boot2docker shellinit)"
