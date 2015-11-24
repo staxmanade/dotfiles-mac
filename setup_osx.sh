@@ -14,7 +14,7 @@ brew cask install gimp
 
 # Fix home and end keys
 mkdir $HOME/Library/KeyBindings
-cp $HOME/dotfiles/resources/DefaultKeyBindings.dict ~/Library/KeyBindings
+cp $HOME/dotfiles/resources/DefaultKeyBinding.dict ~/Library/KeyBindings
 
 # Show hidden files
 defaults write com.apple.Finder AppleShowAllFiles ON
@@ -32,7 +32,7 @@ defaults write -g com.apple.mouse.scaling -float 2.1
 defaults write com.apple.dock checked-for-launchpad true
 
 # Remove all the pinned icons
-defaults write com.apple.dock persistent-apps “()”
+defaults write com.apple.dock persistent-apps '()'
 
 
 # Show Hidden Files

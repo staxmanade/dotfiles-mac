@@ -41,15 +41,10 @@ PROMPT='${PWD/#$HOME/~}%{$fg_bold[green]%}>%{$fg[white]%} '
 # Dotfiles update
 source ~/dotfiles/tools/check_for_upgrade.sh
 
-# whiteboard () {
-#     convert $1 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 $2
-# }
-#
-. /opt/boxen/env.sh
 
-eval "$(gulp --completion=zsh)"
-eval "$(skypeit --completion=zsh)"
-eval "$(tog completion zsh)"
+#eval "$(gulp --completion=zsh)"
+#eval "$(skypeit --completion=zsh)"
+#eval "$(tog completion zsh)"
 
 # thanks to http://murphymac.com/tree-command-for-mac/
 alias tree='find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"'
@@ -59,17 +54,7 @@ alias mou='open /Applications/Mou.app'
 alias pash='mono ~/code/personal/Pash/Source/PashConsole/bin/Debug/Pash.exe'
 
 
-#code () {
-#    if [[ $# = 0 ]]
-#    then
-#        open -a "Visual Studio Code"
-#    else
-#        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-#        open -a "Visual Studio Code" --args "$F"
-#    fi
-#}
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-#eval "$(boot2docker shellinit)"
