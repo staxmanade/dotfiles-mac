@@ -34,6 +34,8 @@ defaults write com.apple.dock checked-for-launchpad true
 # Remove all the pinned icons
 defaults write com.apple.dock persistent-apps '()'
 
+# Don't "move" my spaces (desktops)
+defaults write com.apple.dock mru-spaces 0
 
 # Show Hidden Files
 defaults write com.apple.finder AppleShowAllFiles true
