@@ -35,7 +35,7 @@ defaults write com.apple.dock checked-for-launchpad true
 defaults write com.apple.dock persistent-apps '()'
 
 # Don't "move" my spaces (desktops)
-defaults write com.apple.dock mru-spaces 0
+defaults write com.apple.dock mru-spaces -bool false
 
 # Show Hidden Files
 defaults write com.apple.finder AppleShowAllFiles true
