@@ -3,3 +3,4 @@
 .netrwhist
 *.swp
 directories/vim/bundle/*
+.envrc
