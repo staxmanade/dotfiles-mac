@@ -54,7 +54,6 @@ alias mou='open /Applications/Mou.app'
 alias pash='mono ~/code/personal/Pash/Source/PashConsole/bin/Debug/Pash.exe'
 
 
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

@@ -77,3 +77,5 @@ alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b
 
 # OSX
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;'
+
+

@@ -1,6 +1,3 @@
-[user]
-	name = Jason Jarrett
-	email = jason@elegantcode.com
 [color]
 	ui = true
 [alias]
@@ -10,7 +7,41 @@
 	helper = osxkeychain
 [push]
 	default = simple
+#[merge]
+#	tool = merge_wrapper
+#[mergetool "merge_wrapper"]
+#	cmd = $HOME/dotfiles/tools/merge-wrapper.js \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[url "ssh://git@github.mlbam.net"]
+	insteadOf = git://github.mlbam.net
+[user]
+    useConfigOnly = true
+
+
 [merge]
-	tool = merge_wrapper
-[mergetool "merge_wrapper"]
-	cmd = $HOME/dotfiles/tools/merge-wrapper.js \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+  keepBackup = false
+    tool = p4merge
+[mergetool "p4merge"]
+    cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$PWD/$BASE\"" "\"$PWD/$LOCAL\"" ""\"$PWD/$REMOTE\"" \"$PWD/$MERGED\""
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[diff]
+    tool = p4merge
+[difftool "p4merge"]
+    cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
+[hub]
+	host = github.mlbam.net
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

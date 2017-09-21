@@ -12,6 +12,23 @@ brew cask install mou
 brew cask install spectacle
 brew cask install gimp
 
+# diff-so-fancy
+npm install -g diff-so-fancy
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global color.ui true
+git config --global color.diff-highlight.oldNormal "red bold"
+git config --global color.diff-highlight.oldHighlight "red bold 52"
+git config --global color.diff-highlight.newNormal "green bold"
+git config --global color.diff-highlight.newHighlight "green bold 22"
+git config --global color.diff.meta "227"
+git config --global color.diff.frag "magenta bold"
+git config --global color.diff.commit "227 bold"
+git config --global color.diff.old "red bold"
+git config --global color.diff.new "green bold"
+git config --global color.diff.whitespace "red reverse"
+
+
+
 # Fix home and end keys
 mkdir $HOME/Library/KeyBindings
 cp $HOME/dotfiles/resources/DefaultKeyBinding.dict ~/Library/KeyBindings
@@ -66,7 +83,7 @@ defaults write com.apple.dashboard mcx-disabled -boolean true
 # Setup pictures":
 mkdir -p ~/Pictures/Screenshots && defaults write com.apple.screencapture location ~/Pictures/Screenshots/ && killall SystemUIServer
 
-  
+
 # Mail: adjust polling time
 defaults write com.apple.mail PollTime 1
 
