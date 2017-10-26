@@ -95,6 +95,7 @@ defaults write com.apple.Safari IncludeDevelopMenu -boolean true
 
 # XCode: turn on line numbers
 defaults write com.apple.dt.Xcode DVTTextShowLineNumbers YES
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -boolean true
 
 # XCode: set to the midnight theme
 defaults write com.apple.dt.Xcode DVTFontAndColorCurrentTheme 'Midnight.dvtcolortheme'
