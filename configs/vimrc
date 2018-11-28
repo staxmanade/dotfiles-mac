@@ -75,7 +75,6 @@ filetype plugin indent on     " required!
 Bundle 'jelera/vim-javascript-syntax'
 
 " filetype detection and syntax highlightnig for JSON in Vim
-Bundle 'helino/vim-json'
 
 " Vastly improved Javascript indentation and syntax support in Vim.
 Bundle 'pangloss/vim-javascript'

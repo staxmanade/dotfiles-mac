@@ -11,8 +11,8 @@
 #	tool = merge_wrapper
 #[mergetool "merge_wrapper"]
 #	cmd = $HOME/dotfiles/tools/merge-wrapper.js \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-[url "ssh://git@github.mlbam.net"]
-	insteadOf = git://github.mlbam.net
+#[url "ssh://git@github.mlbam.net"]
+#	insteadOf = git://github.mlbam.net
 [user]
     useConfigOnly = true
 
@@ -29,8 +29,6 @@
     tool = p4merge
 [difftool "p4merge"]
     cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
-[hub]
-	host = github.mlbam.net
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [color "diff-highlight"]

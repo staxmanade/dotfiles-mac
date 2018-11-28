@@ -30,7 +30,7 @@ git config --global color.diff.whitespace "red reverse"
 
 
 # Fix home and end keys
-mkdir $HOME/Library/KeyBindings
+mkdir -p $HOME/Library/KeyBindings
 cp $HOME/dotfiles/resources/DefaultKeyBinding.dict ~/Library/KeyBindings
 
 # Show hidden files
