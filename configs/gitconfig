@@ -6,7 +6,7 @@
 [credential]
 	helper = osxkeychain
 [push]
-	default = simple
+	default = current
 #[merge]
 #	tool = merge_wrapper
 #[mergetool "merge_wrapper"]
